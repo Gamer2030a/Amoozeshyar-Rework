@@ -1,0 +1,301 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-family:Vazir-Light;
+  src: url(src/Vazir-Light.ttf);
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+.sidebar .logo img{
+    vertical-align: middle;
+    width: 100px;
+    height: 70px;
+    border-radius: 10%;
+    flex-basis: 40%;
+    display:flex;
+    align-items: center;
+    margin-right: 20%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 210px;
+    background-color: rgb(22, 22, 22);
+}
+
+.sidebar .navbr li{
+    list-style: none;
+    position: relative;
+    left: 25%;
+}
+
+.sidebar .navbr li i{
+    list-style: none;
+    position: relative;
+    height: 50px;
+    min-width: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+.sidebar .navbr li:hover{
+    color: white;
+    background: #1d1d1d;
+}
+
+.sidebar .navbr li a{
+    font-family: vazir-light;
+    color: white;
+    text-decoration: none   ;
+}
+
+.sidebar .profile .profileContent img{
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0 5px 0 12px;
+    background: #1d1d1d;
+    padding: 10px;
+}
+
+.sidebar .profile{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1d1d1d;
+}
+
+.sidebar .profile-con .pf-name{
+    font-family: vazir-light;
+    color: white;
+
+}
+
+.sidebar .profile-con .pf-reshte{
+    font-family: vazir-light;
+    color: white;
+    font-size: 10px;
+}
+
+.sidebar .profile i{
+    list-style: none;
+    position: relative;
+    height: 50px;
+    min-width: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.search-bar form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid black;
+  float: left;
+  width: 80%;
+  background: #1d1d1d;
+}
+
+.search-bar form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #1d1d1d;
+  color: white;
+  font-size: 17px;
+  border: 1px solid black;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: black;
+}
+
+/* Clear floats */
+.form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Pagination links */
+.page .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+
+}
+
+/* Style the active/current link */
+.page .pagination a.active {
+  background-color: #1d1d1d;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: whitesmoke;}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.page{
+  position: absolute;
+  bottom: 10px;
+  width: 25%;
+  left: 30%;
+}
+
+.container h4{
+  color: #1d1d1d;
+  font-family: vazir-light;
+  font-size: 20px;
+}
+
+.container p{
+  color: #1d1d1d;
+  font-family: vazir-light;
+  font-size: 16px;
+}
+
+.card {
+  position: absolute;
+  top: 20px;
+  width: 25%;
+  left: 1%;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  
+}
+
+
+.card2 {
+  position: absolute;
+  top: 20px;
+  width: 25%;
+  left: 30%;
+}
+
+.card2 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+
+.card3 {
+  position: absolute;
+  top: 20px;
+  width: 25%;
+  left: 60%;
+  right: 16%;
+}
+
+.card3 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
